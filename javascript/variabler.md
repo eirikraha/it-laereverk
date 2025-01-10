@@ -84,7 +84,10 @@ forskjellige typer innhold en variabel kan ha. Her skal vi lære litt om de vikt
 
 ### Heltall
 En enkel tommelfingerregel for heltall er at det er tallene vi pleier å bruke når vi teller.
-1, 2, 3, 4 osv. er heltall. Og selv om vi ikke alltid teller dem, så er 0, -1, -2, -3 osv. også heltall.
+1, 2, 3, 4 osv. er heltall. Og selv om vi ikke alltid teller dem, så er 0, -1, -2, -3 osv. også heltall. Et eksempel på en variabel med heltall som vi allerede har blitt godt kjent med er:
+```javascript
+let minAlder = 17;
+```
 
 ### Desimaltall
 
