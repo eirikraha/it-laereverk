@@ -44,7 +44,7 @@ Det første vi ser er ordet `let`. Dette betyr at denne variabelen er nettopp, v
 minAlder er navnet vi gir variabelen. Du kan lese mer om hvordan vi gir navn til variabler [her](#navngi-variabler).
 
 ### =
-Det er lett å overse dennne delen, men "er lik"-tegnet (=) er viktig å merke seg i programmering. "er lik"-tegnet sier nettopp at et variabelnavn betyr, eller er lik, en verdi. Vi kan kalle dette en tildelingsoperator.
+Det er lett å overse denne delen, men "er lik"-tegnet (=) er viktig å merke seg i programmering. "er lik"-tegnet sier nettopp at et variabelnavn betyr, eller er lik, en verdi. Vi kan kalle dette en tildelingsoperator.
 
 ### 17
 Dette er verdien som lagres. Verdiene i en variabel kan være heltall som her, desimaltall, tekst eller boolske verdier. Hvis de ordene ikke sier deg så mye, så kan du lese mer om dem [her](#typer-variabler).
@@ -52,7 +52,7 @@ Dette er verdien som lagres. Verdiene i en variabel kan være heltall som her, d
 ## Initialisere variabler
 
 Å initialisere betyr å [gjøre noe klar til bruk.](https://naob.no/ordbok/initialisere)
-Dette kan vi gjøre på flere måter. Det vanligste er å gjøre som i eksemepelt vårt hvor vi skrev
+Dette kan gjøres på flere måter. Det vanligste er å gjøre som i eksemepelt vårt hvor vi skrev
 ```javascript
 let minAlder = 17;
 ```
@@ -66,17 +66,39 @@ kan være en variabel som holder et navn:
 ```javascript
 const mittNavn = "Espen";
 ```
-Vi trenger egentlig ikke å gi variabelen en verdi med en gang. Det går også an å initialisere
-en variabel uten en verdi. Dersom en velger å gjøre dette, bør en gi variabelen verdi senere i koden.
+For `let` trenger egentlig ikke å gi variabelen en verdi med en gang. Det går også an å initialisere
+en `let`-variabel uten en verdi. Dersom en velger å gjøre dette, bør en gi variabelen verdi senere i koden.
 ```javascript
-const mittNavn;
 let minAlder;
 
-navnetMitt = "Per";
 minAlder = 16;
 ```
+Som oftest gir vi en variabel en verdi med én gang, men denne metoden kan for eksempel brukes når koden er veldig lang og vi vil initiere alle variablene på ett sted for å gjør koden mer leslig.
 
-## Bruke variabler
+## Endre variabler
+`let`-variabler kan vi endre på underveis i koden, det gjør vi ganske enkelt slik som dette:
+```javascript
+let minAlder = 17;
+minAlder = 18;
+```
+Javascript leser gjennom koden linje for linje. Når en variabel blir oppdatert, huskes dette helt til neste gang variabelen blir oppdatert. Hvis vi skriver en litt lengre kode, kan vi se dette i praksis:
+```javascript
+let minAlder = 17;
+console.log("Min alder er: ")
+console.log(minAlder);
+
+minAlder = 18;
+console.log("Min oppdaterte alder er: ")
+console.log(minAlder);
+```
+`console.log()` gjør slik at programmet skriver det som står inne i parantesen tilbake til oss. I dette tilfellet ville denne koden gitt oss følgende tilbake:
+```
+Min alder er:
+17
+Min oppdaterte alder er: 
+18
+```
+som du ser, endrer alderen seg når vi oppdaterer variabelen for alder.
 
 ## Variablenes innhold
 Som vi allerede har sett, kan variabler inneholde både tekst og nummer. Det finnes mange
@@ -111,11 +133,11 @@ ikke skal tolkes som tall.
 ### Boolske
 Boolske (uttales: bolske med bol som i vepsebol) varibler er nok nytt for
 de fleste når en starter med programmering. En boolsk variabel er noe som bare
-kan ha én av to verdier. Som regel er disse verdiene True eller False (sant eller usant).
+kan ha én av to verdier. Som regel er disse verdiene true eller false (sant eller usant).
 To eksempel kan være:
 ```javascript
-const norgeErEtLand = True;
-let bergenErEtLand = False;
+const norgeErEtLand = true;
+let bergenErEtLand = false;
 ```
 Dette ser kanskje ikke så nyttig ut, men det å tenke boolsk hjelper
 ofte på å korte ned koder og sjekker. Dette kommer vi tilbake
@@ -137,14 +159,15 @@ men det er vanskelig å lese. Da er det mye bedre å skrive
 let detteNavnetBleLittLangt;
 ```
 Denne måten å skrive variabelnavn på kalles for camelCase siden de store bokstavene bortover
-ser ut som humper i variabelnavnet.
+ser ut som humper i variabelnavnet. Målet er å gjøre variabelnavnene lettere å lese.
 
 # Oppgaver
 1) Forklar forskjellen på de ulike typene variablene heltall, desimaltall, streng og boolsk.
 2) Skriv et enkelt program hvor du definerer en variabel (lager en variabel) som
 heter minAlder. Skriv den så til konsoll
-```
+```javascript
 Tips!
-For å skrive til konsoll bruker du kommandoen console.log(variabel)
+For å skrive til konsoll bruker du kommandoen console.log(<det du vil skrive til konsoll>);
+Husk at hvis du vil skrive en variabel til konsoll, skriv navnet på variabelen istedenfor <det du vil skrive til konsoll>.
 ```
 3) Forklar forskjellen på `let` og `const`.
