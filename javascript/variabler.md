@@ -64,12 +64,12 @@ Hvis variabelen ikke skal endre seg, kan vi bruke `const`. Da forteller vi progr
 at her kommer det en variabel som skal være lik gjennom alt vi gjør. Et eksempel på dette
 kan være en variabel som holder et navn:
 ```javascript
-const navnetMitt = "Espen";
+const mittNavn = "Espen";
 ```
 Vi trenger egentlig ikke å gi variabelen en verdi med en gang. Det går også an å initialisere
 en variabel uten en verdi. Dersom en velger å gjøre dette, bør en gi variabelen verdi senere i koden.
 ```javascript
-const navnetMitt;
+const mittNavn;
 let minAlder;
 
 navnetMitt = "Per";
@@ -90,11 +90,39 @@ let minAlder = 17;
 ```
 
 ### Desimaltall
+Enkelt forklart er desimaltall de tallene hvor vi bruker komma/punktom.
+Et eksempel på en variabel med desimaltall kan være:
+```javascript
+let minLengde = 1.7;
+```
+Legg merke til at når vi faktisk skriver tallet på programmeringsspråket,
+så bruker vi engelsk tegnsetting og da må vi skrive punktom istedenfor komma. 
 
+### Streng
+En streng (string på engelsk) høres litt merkelig ut, men det betyr bare
+at variabelen består av tekst. Et eksempel kan være:
+```javascript
+const mittNavn = "Espen";
+```
+Legg merke til at teksten variabelen starter og stopper med hermetegn.
+Dette brukes for å fortelle datamaskinen at her kommer tekst og at bokstavene 
+ikke skal tolkes som tall.
+
+### Boolske
+Boolske (uttales: bolske med bol som i vepsebol) varibler er nok nytt for
+de fleste når en starter med programmering. En boolsk variabel er noe som bare
+kan ha én av to verdier. Som regel er disse verdiene True eller False (sant eller usant).
+To eksempel kan være:
+```javascript
+const norgeErEtLand = True;
+let bergenErEtLand = False;
+```
+Dette ser kanskje ikke så nyttig ut, men det å tenke boolsk hjelper
+ofte på å korte ned koder og sjekker. Dette kommer vi tilbake
+til i seksjonen om [if-tester.](kommer)
 
 ## Navngi variabler
-
-Har du lagt merke til at begge variablene "minAlder" og "navnetMitt" er skrevet på en spesiell måte?
+Har du lagt merke til at begge variablene "minAlder" og "mittNavn" er skrevet på en spesiell måte?
 Begge navnene består av to ord uten mellomrom mellom dem. Det første ordet er skrevet
 med liten forbokstav og det andre med en stor.
 
@@ -110,3 +138,13 @@ let detteNavnetBleLittLangt;
 ```
 Denne måten å skrive variabelnavn på kalles for camelCase siden de store bokstavene bortover
 ser ut som humper i variabelnavnet.
+
+# Oppgaver
+1) Forklar forskjellen på de ulike typene variablene heltall, desimaltall, streng og boolsk.
+2) Skriv et enkelt program hvor du definerer en variabel (lager en variabel) som
+heter minAlder. Skriv den så til konsoll
+```
+Tips!
+For å skrive til konsoll bruker du kommandoen console.log(variabel)
+```
+3) Forklar forskjellen på `let` og `const`.
