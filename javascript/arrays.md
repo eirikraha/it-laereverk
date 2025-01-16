@@ -39,7 +39,15 @@ Array'er kan inneholde andre verdier enn tall. Det kan være alle typer variable
 let blandaArray = [110, "brann", true, null, {lokasjon: "Haugalandet"}];
 ```
 
-### Lengde på array
+
+### Array-egenskaper
+Arrayer er en datatype som inneholder mange egenskaper. Disse egenskapene sier noe om arrayen sine metadata.
+
+```
+Metadata betyr informasjon rundt noe. For eksempel er din høyde, vekt, hårfarge, navn, interesser og lignende metadata om deg.
+```
+
+#### length
 For å finne ut hvor mange elementer en array innholder, kan vi bruke en innebygd egenskap som heter `length` (lengde):
 ```javascript
 let nodnummer = [110, 113, 112];
@@ -48,6 +56,24 @@ console.log(nodnummer.length) // 3
 
 ### Array-metoder
 Det finnes mange `metoder` som endrer på en array. Disse har forskjellige funksjoner og er nyttige å ha når de trengs. Nedenfor kan du lese om de mest nyttige metodene.
+
+### sort()
+Sort-metoden sorterer en array alfabetisk eller fra minst til størst:
+```javascript
+let fylker = ["Rogaland", "Agder", "Østfold", "Trøndelag", "Troms"];
+fylker.sort()
+
+console.log(fylker) //["Agder", "Rogaland", "Trøndelag", "Troms", "Østfold"]
+```
+
+### reverse()
+Reverse-metoden reverserer rekkefølgen på en array
+```javascript
+let nodnummer = [110, 113, 112];
+nodnummer.reverse();
+
+console.log(nodnummer); // 112, 113, 110
+```
 
 #### push()
 Push-metoden "skubber" (pusher) inn et nytt element på slutten av arrayen. Dermed blir lengden på arrayen ett hakk lenger.
@@ -68,9 +94,40 @@ console.log(sisteElement); // 112
 ```
 
 #### shift()
+Shift-metoden minner veldig opp pop, men shift() fjerner det første elementet i en array og returnerer det.
+```javascript
+let nodnummer = [110, 113, 112];
+let forsteElement = nodnummer.shift());
+console.log(nodnummer); //[113, 112]
+console.log(forsteElement); // 110
+```
 
 #### unshift()
-
+Unshift-metoden legger til ett eller flere element på begynnelsen av en array. Den er derfor en slags blanding av `push()` og `shift()`.
+```javascript
+let nodnummer = [110, 113, 112];
+let nyeNodnummer = nodnummer.unshift(116117, 02800));
+console.log(nodnummer); //[116117, 02800, 110, 113, 112]
+```
 #### splice()
+Splice-metoden fjerner ett eller flere element og setter inn nye istedenfor. Inni parantesen til splice() kan vi sette inn tre forskjellige tall med komma mellom. Det første tallet er ved hvilken indeks vi vil begynne å ta ut, det andre tallet er hvor mange elementer vi vil fjerne. Det tredje er valgfritt. Der kan vi skrive hva vi ønsker å erstatte element(ene) vi har tatt bort med. Hvis vi ønsker å "fange opp" de elementene vi kaster bort, så kan vi sette en variabel lik splice().
+```javascript
+let nodnummer = [110, 113, 911];
+let forkastetNodnummer = nodnummer.splice(2, 1, 112)
+
+console.log(nodnummer); //[110, 113, 112]
+console.log(rforkastetNodnummer); //911
+```
 
 #### slice()
+Slice-metoden henter ut en del av en array uten å påvirke selve arrayen. Slice tar imot en start- og en (valgfri) slutt-indeks for hva den skal hente ut.
+```javascript
+let viktigeNummer = [110, 113, 112, 116117, 02800];
+let nodnummer = viktigeNummer.slice(0, 3) //henter element fra indeks til indeksen rett før 3
+
+console.log(viktigeNummer); // [110, 113, 112, 116117, 02800]
+console.log(nodnummer); // [110, 113, 112]
+```
+
+### Andre metoder og egenskaper
+Det finnes langt flere metoder og egenskaper enn det vi har listet opp her. Dette er bare noen utvalgte. Hvis du vil lære mer kan du lese her: https://www.w3schools.com/js/js_array_methods.asp 
