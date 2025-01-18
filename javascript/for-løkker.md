@@ -106,5 +106,3 @@ for (let tall = 1; tall<10; tall++) {
 }
 ```
 Begge kodesnuttene ovenfor vil gjøre det samme, men for-løkka går mye kjappere å skrive og endre på.
-
-### foreach()
