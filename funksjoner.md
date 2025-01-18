@@ -73,7 +73,7 @@ Funksjoner skal ha navn som beskriver hva funksjonen gjør og de skrives med `ca
 4) Lag en funksjon for å sjekke alderen til en person. La funksjonen returnere `true` hvis personen er over 18 år og `false` hvis personen er under 18 år. (Her må du bruke en if-test. Trenger du en oppfrisker på hva det er, kan du lese om det [her](if-tester.md))
 5) Lag en funksjon som legger sammen to tall og returnerer svaret.
 6) Pythagoras er en formel i matte som kan finne lengden på sidene i en rettvinklet trekant. Formelen er som følger: ``a*a + b*b = c*c``. Skriv dette som en funksjon som returnerer `c**2`.
-7) Bruk det siste eksempelet fra teksten og la kall på ``changeHP`` to ganger til.
+7) Bruk det siste eksempelet fra teksten og kall på ``changeHP`` to ganger til.
 
 ## Større oppgave
 1) Utvid det siste eksempelet. Lag en if-test som sjekker om playerHP er større enn 0. Hvis den er det, så angriper fienden igjen. 
