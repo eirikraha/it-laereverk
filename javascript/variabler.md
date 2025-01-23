@@ -10,6 +10,8 @@ For eksempel kan vi skrive følgende
 let minAlder = 17;
 ```
 
+Ogabogabo
+
 Her har vi laget en boks med merkelappen "minAlder". Denne boksen inneholder tallet 17.
 
 ```lua
