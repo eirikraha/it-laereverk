@@ -107,6 +107,25 @@ Variabler i Python bør ha navn som er lette å lese og forstå. En vanlig konve
 dette_er_et_langt_variabelnavn = 42
 ```
 
+## Lister
+Av og til vil vi samle mange variabler i en datastruktur. Da bruker vi noe vi kaller lister.
+
+Et eksempel på ei liste, kan være liste over stedsnavn i Norge:
+```python
+stedsnavn = ["Kråkevoll", "Gjeitaskjær", "Ur", "Sørskår", "Døvik"]
+```
+Lister kan også inneholde tall:
+```python
+fartsgrenser = [30, 40, 50, 60, 70, 80, 90, 100, 110]
+```
+Vi sier at lista består av mange elementer. Hvert element har sin egen indeks (plassering i lista). Dette kan vi bruke når vi skal hente ut et spesifikt element i lista. Det gjør vi med å skrive listenavn[indeks].
+```python
+fartsgrenser = [30, 40, 50, 60, 70, 80, 90, 100, 110]
+
+print(fartsgrenser[2]) # Printer ut tallet 50
+```
+Du lag kanskje merke til noe rart i eksempelet ovenfor? Indeksen var satt til 2, men vi hentet ut det tredje elementet i lista. Dette er fordi det første elementet har indeks 0, det andre har indeks 1 og så videre.
+
 # Oppgaver
 1) Forklar forskjellen mellom heltall, desimaltall, tekst og boolske verdier.
 2) Skriv et enkelt program som definerer en variabel kalt `min_alder` og skriver den til konsoll:

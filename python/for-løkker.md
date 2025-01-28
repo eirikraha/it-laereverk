@@ -94,3 +94,44 @@ for tall in range(1, 11):
     print(f"Poli{tall}")
 ```
 Begge kodesnuttene ovenfor vil gjøre det samme, men for-løkka går mye kjappere å skrive og endre på.
+
+## For-løkker og lister
+I [variabler](variabler.md)-kapittelet lærte vi om lister. Det finnes en egen måte å skrive for-løkker når vi henter ut hvert element i ei liste (itererer gjennom lista).
+
+```python
+farger = ["rød", "orange", "gul", "grønn", "blå", "indigo", "fiolett"]
+
+for farge in farger:
+    print(farge)
+```
+Kjører vi eksempelet over, får vi:
+```
+rød
+orange
+gul
+grønn
+blå
+indigo
+fiolett
+```
+### For-løkker og lister med indeks
+
+Det er også mulig å bruke indeksen, men det regnes som en mer tungvindt metode
+
+```python
+farger = ["rød", "orange", "gul", "grønn", "blå", "indigo", "fiolett"]
+
+for indeks in range(0, len(farger)):
+    print(farger[indeks])
+```
+I eksempelet bruker vi `len(farger)` som er en funksjon for å hente ut lengden på ei liste. Mer om [funksjoner i dette kapittelet](funksjoner.md).  
+Kjører vi eksempelet over, får vi akkurat det samme som sist:
+```
+rød
+orange
+gul
+grønn
+blå
+indigo
+fiolett
+```
