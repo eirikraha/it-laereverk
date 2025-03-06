@@ -1,6 +1,6 @@
 # Git og github
 
-## Hva er Git og GitHub?
+## Hva er Git og GitHub? og hvorfor lurer du på det?
 Git og GitHub brukes daglig av enormt mange utviklere verden over. Det er et nyttig redskap for å sikre deling, kontroll og testing av kode. Git er selve kjernen i det hele og er et program som du installerer lokalt på PCen din. Når Git er installert, kan det brukes til å spore endringer i filer og kode som du jobber med på maskinen din. En slik samling med kode kalles et ``repository``. Et repository kan være lite og inneholde noen få filer eller det kan være enormt stort og inneholde hele program.
 
 GitHub er en av mange tjenester som kan brukes for å lagre og samarbeide om Git-repositories på nett. På GitHub kan en lage både offentlige og private repositories, noe som gjør at du kan jobbe med noe helt privat og ha det lagret hos GitHub (i tillegg til din lokale PC) eller du kan dele det med alle andre. Da kan alle andre laste ned ditt repository og så laste opp sine forslag til endringer på koden din.
@@ -51,7 +51,7 @@ I VSCode sitt Explorer-vindu:
 5. Explorer-ruta endrer seg nå til Source Control-ruta. Her får du en oversikt over hvilke filer som har blitt endret. Øverst ser du en blå knapp hvor det står: Commit. Trykk på pil ned til høyre for den og velg "Commit & Push"
     - Commit lagrer endringene dine lokalt på PC-en, mens Push sender dem til GitHub, slik at de er tilgjengelige på nett.
 6. Du blir spurt om du vil lagre, trykk ja
-7. Du får nå opp ei fil med mye grønn skrift. Etter alle #-tegnene kan du skrive en liten kommentar om hva du har endra på. I dette tilfellet kan du skrive "Lagde test.txt"
+7. Du får nå opp ei fil med mye grønn skrift. Etter alle #-tegnene kan du skrive en liten kommentar om hva du har endret på. I dette tilfellet kan du skrive "Lagde test.txt"
 8. Trykk på ✔️-tegnet oppe til høyre.
 9. Gå til github og finn repositoryet ditt der.
 10. Du vil nå se at du har lastet opp fila di til GitHub. Bra jobba!
@@ -320,7 +320,7 @@ git push --force
 Før du bidrar, må du lese følgende filer i repoet:
 - **`README.md`** – Beskrivelse av prosjektet og hvordan man bruker det.
 - **`CONTRIBUTING.md`** – Veiledning for hvordan du kan bidra.
-- **`CODE_OF_CONDUCT.md`** – Regler for atferd i prosjektet.
+- **`CODE_OF_CONDUCT.md`** – Regler for adferd i prosjektet.
 
 **Hvis `CONTRIBUTING.md` mangler:** Sjekk Issues eller Pull Requests for retningslinjer.
 
