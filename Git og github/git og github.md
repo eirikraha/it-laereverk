@@ -1,6 +1,6 @@
 # Git og github
 
-## Hva er Git og GitHub? og hvorfor lurer du på det?
+## Hva er Git og GitHub?
 Git og GitHub brukes daglig av enormt mange utviklere verden over. Det er et nyttig redskap for å sikre deling, kontroll og testing av kode. Git er selve kjernen i det hele og er et program som du installerer lokalt på PCen din. Når Git er installert, kan det brukes til å spore endringer i filer og kode som du jobber med på maskinen din. En slik samling med kode kalles et ``repository``. Et repository kan være lite og inneholde noen få filer eller det kan være enormt stort og inneholde hele program.
 
 GitHub er en av mange tjenester som kan brukes for å lagre og samarbeide om Git-repositories på nett. På GitHub kan en lage både offentlige og private repositories, noe som gjør at du kan jobbe med noe helt privat og ha det lagret hos GitHub (i tillegg til din lokale PC) eller du kan dele det med alle andre. Da kan alle andre laste ned ditt repository og så laste opp sine forslag til endringer på koden din.
