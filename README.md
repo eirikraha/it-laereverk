@@ -1,8 +1,8 @@
 # it-læreverk
 
-Velkommen til dette læreverket innen for IT på videregående.
+Velkommen til dette læreverket innenfor IT på videregående.
 
-Leter du etter oppgaver for python? Gå til mappa python og gå til fila oppgaver.md.
+Hvert av fagene for VG2 IT har sin egen mappe. Du finner også mapper for overordnede tema som `Git og github`.
 
 ## For naturfag
 Les dokumentene i python-mappa i denne rekkefølgen:
