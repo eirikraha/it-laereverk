@@ -86,6 +86,6 @@ for bruker in $@; do   #går gjennom alle argument gitt inn med kommandoen
     echo "$bruker:$midlpass" | sudo chpasswd #skriver brukernavn og passord til terminal. | sender echo inn i neste kommando. sudo chpasswd endrer passord
     sudo chage -d 0 "$bruker" #endrer alder (change age = chage) på passord, -d (dato) for sist endret passord til 0 som betyr at passord er utløpt
     echo "Bruker $bruker er opprettet og har hjemmeområde ved /home/$bruker og må bytte passord ved første innlogging" #tekst til bruker
-done
+done #avslutter for-løkke
 ```
 OBS! Sciprtet ovenfor er ikke testet på server ennå
