@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Pokédex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="kort">
+        <h1 id="navn">Laster …</h1>
+
+        <div id="midten">
+            <button id="forrige" title="Forrige Pokémon">&lt;</button>
+            <img id="bilde" alt="">
+            <button id="neste" title="Neste Pokémon">&gt;</button>
+        </div>
+
+        <p id="fakta" title="Klikk for en ny faktasetning"></p>
+    </div>
+
+    <script>
+        const ANTALL = 1025;  // Antall Pokémon i Pokédexen (nr. 1 til 1025)
+
+        const navn = document.getElementById("navn");
+        const bilde = document.getElementById("bilde");
+        const fakta = document.getElementById("fakta");
+        const forrige = document.getElementById("forrige");
+        const neste = document.getElementById("neste");
+
+        let nummer = Math.floor(Math.random() * ANTALL) + 1;  // Start på en tilfeldig Pokémon
+        let faktaListe = [];
+
+        // Velg en tilfeldig faktasetning fra lista og vis den
+        function visTilfeldigFakta() {
+            const tilfeldig = Math.floor(Math.random() * faktaListe.length);
+            fakta.textContent = faktaListe[tilfeldig];
+        }
+
+        // Hent Pokémon med nummeret i variabelen "nummer" og vis den på sida
+        async function visPokemon() {
+            fakta.textContent = "Henter …";
+
+            try {
+                // Her er nettsida KLIENT: den spør serveren vår (ikke PokeAPI direkte)
+                const svar = await fetch(`/pokemon/${nummer}`);
+                const pokemon = await svar.json();
+
+                // Sjekk statuskoden. Gikk noe galt, viser vi feilmeldingen fra serveren
+                if (!svar.ok) {
+                    fakta.textContent = pokemon.feil;
+                    return;
+                }
+
+                navn.textContent = pokemon.navn;
+                bilde.src = pokemon.bilde;
+                bilde.alt = pokemon.navn;
+                faktaListe = pokemon.fakta;
+                visTilfeldigFakta();
+            } catch (error) {
+                fakta.textContent = "Fikk ikke kontakt med serveren. Kjører den?";
+            }
+        }
+
+        // Pil til venstre: gå til forrige. Fra nr. 1 hopper vi til den siste
+        forrige.addEventListener("click", () => {
+            nummer = nummer - 1;
+            if (nummer < 1) {
+                nummer = ANTALL;
+            }
+            visPokemon();
+        });
+
+        // Pil til høyre: gå til neste. Fra den siste hopper vi til nr. 1
+        neste.addEventListener("click", () => {
+            nummer = nummer + 1;
+            if (nummer > ANTALL) {
+                nummer = 1;
+            }
+            visPokemon();
+        });
+
+        // Klikk på faktasetningen for å få en ny
+        fakta.addEventListener("click", visTilfeldigFakta);
+
+        // Piltastene på tastaturet virker også
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "ArrowLeft") forrige.click();
+            if (event.key === "ArrowRight") neste.click();
+        });
+
+        visPokemon();  // Vis den første Pokémonen når sida lastes
+    </script>
+</body>
+</html>

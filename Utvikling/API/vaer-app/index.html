@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Enkel vær-app</title>
+</head>
+<body>
+    <h1>Været i Oslo</h1>
+    <pre id="resultat"></pre>
+
+    <script>
+        async function hentVaer() {
+            const svar = await fetch("/vaer");
+            const data = await svar.json();
+
+            document.getElementById("resultat").textContent = JSON.stringify(data, null, 2);
+        }
+
+        hentVaer();
+    </script>
+</body>
+</html>

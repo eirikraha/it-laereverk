@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f8;
+    color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#kort {
+    background-color: white;
+    width: 500px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#navn {
+    color: #d63c3c;
+    margin: 0 0 20px;
+}
+
+/* Pilene og bildet ved siden av hverandre */
+#midten {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#bilde {
+    width: 300px;
+    height: 300px;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #d63c3c;
+    color: white;
+    border: none;
+    border-radius: 50%;  /* Gjør knappene runde */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b02e2e;
+}
+
+#fakta {
+    margin: 20px 0 0;
+    font-size: 18px;
+    min-height: 50px;  /* Hindrer at kortet hopper når teksten endrer seg */
+    cursor: pointer;
+}
